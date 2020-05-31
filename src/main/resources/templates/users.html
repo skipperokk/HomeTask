@@ -12,7 +12,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <div th:replace="/navbar :: navbar"></div>
+<!--        <div th:replace="/navbar :: navbar"></div>-->
         <div class="col">
             <div th:switch="${#lists.size(users)}">
                 <div th:case="0"><h2 style="margin-top: 50%;">В этом отделе нет сотрудников или отдел не существует</h2>
