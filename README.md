@@ -12,10 +12,12 @@
 
   • Связь таблицы calendar с user | calendar с event
   
-  <a href="https://ibb.co/PZHTtrb"><img src="https://i.ibb.co/JRJxCcb/2.png" alt="2" border="0"></a>
+  <a href="https://ibb.co/j8NTTb0"><img src="https://i.ibb.co/YNC33Pn/1.png" alt="1" border="0"></a>
   
   
   2) ПО с пользовательским интерфейсом для просмотра учёта времени
   
   • Ссылка на исходный код - https://github.com/skipperokk/hometask (главная страница http://localhost:8080/)
   • Ссылка на приложение (deploy on Heroku) - https://hometask-nauka.herokuapp.com/
+
+Код написан на Java с использованием Spring Boot, Lombok, MySQL, Thymeleaf, Bootstrap 4.
