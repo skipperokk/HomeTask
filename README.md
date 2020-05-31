@@ -18,6 +18,7 @@
   2) ПО с пользовательским интерфейсом для просмотра учёта времени
   
   • Ссылка на исходный код - https://github.com/skipperokk/hometask (главная страница http://localhost:8080/)
+  
   • Ссылка на приложение (deploy on Heroku) - https://hometask-nauka.herokuapp.com/
 
 Код написан на Java с использованием Spring Boot, Lombok, MySQL, Thymeleaf, Bootstrap 4.
