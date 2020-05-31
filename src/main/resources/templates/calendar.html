@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/css/style.css" rel="stylesheet" media="all">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>[[${user.first_name}]] [[${user.last_name}]] Таб.№[[${user.tab_number}]]</title>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Информация о сотруднике</h2>
+    <hr class="mb-4">
+
+    <!--  Группа кнопок -->
+    <div class="text-center">
+        <div class="btn-group flex-wrap">
+            <div th:each="nameOfMonths, stats : ${nameOfMonths}">
+
+                <a th:href="@{/calendar/{id}/{month}(id=${user.tab_number}, month=${stats.index})}"
+                   class="btn btn-success center-block" style="border-radius:0rem;">
+                    <span th:text="${nameOfMonths}"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-4">
+    <!--  Таблица -->
+    <div class="table-responsive">
+        <table class="table table-bordered table-sm">
+            <thead>
+            <tr>
+                <th>ФИ</th>
+                <th>Должность</th>
+                <th>Табельный номер</th>
+                <th th:each="day : ${days}">
+                    <div th:text="${day}"></div>
+                </th>
+                <th>Итого</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div th:text="${user.first_name}"></div>
+                    <div th:text="${user.last_name}"></div>
+                </td>
+                <td th:text="${user.position}"></td>
+                <td th:text="${user.tab_number}"></td>
+                <td th:each="events : ${events}">
+                    <span th:text="${events.event}"></span>
+                </td>
+                <td>
+                    <div th:each="sumOfEvents : ${sumOfEvents}">
+                        <span th:text="${sumOfEvents.key}"></span>(<span th:text="${sumOfEvents.value}"></span>);
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--  Кнопка назад -->
+
+    <div>
+        <hr class="mb-3">
+        <a th:href="@{/users/{id}(id=${user.department.iddepartment})}" class="btn btn-info btn-lg btn-block"
+           role="button" aria-pressed="true">К списку сотрудников отдела</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+</body>
+</html>
