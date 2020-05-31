@@ -12,7 +12,7 @@
 
   • Связь таблицы calendar с user | calendar с event
   
-  <a href="https://ibb.co/j8NTTb0"><img src="https://i.ibb.co/YNC33Pn/1.png" alt="1" border="0"></a>
+  <a href="https://ibb.co/cw3vpyD"><img src="https://i.ibb.co/w7gLbdM/1.png" alt="1" border="0"></a>
   
   
   2) ПО с пользовательским интерфейсом для просмотра учёта времени
