@@ -2,7 +2,7 @@
 
  1) БД учета рабочего времени – табель
  
-  • Схемь с объяснениями:
+  • Схема с объяснениями:
 
 <a href="https://ibb.co/GkTbqQK"><img src="https://i.ibb.co/d6gzR4d/image.png" alt="image" border="0"></a>
 
